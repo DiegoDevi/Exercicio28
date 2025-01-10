@@ -24,7 +24,7 @@ function tarefasCSS(cb) {
             ])
 
         .pipe(stripCss())                 // remove comentários
-        .pipe(concat('libs.css'))         // mescla arquivos
+        .pipe(concat('style.css'))         // mescla arquivos
         .pipe(cssmin())                     // minifica css
         .pipe(rename({ suffix: '.min'}))    // libs.min.css
         .pipe(gulp.dest('./dist/css'))      // cria arquivo em novo diretório
